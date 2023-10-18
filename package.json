@@ -6,7 +6,7 @@
   "engines": {
     "node": ">=18.18.0",
     "yarn": ">=1.22.0",
-    "npm": "please-use-yarn"
+    "npm": "please use yarn to install"
   },
   "scripts": {
     "ng": "ng",
