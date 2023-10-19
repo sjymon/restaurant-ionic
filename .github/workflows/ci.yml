@@ -31,7 +31,7 @@ jobs:
       - name: Build
         run: yarn build
 
-      - uses: artiomtr/jest-coverage-report-action@v2.0-rc.4
+      - uses: artiomtr/jest-coverage-report-action@v2.2.5
         with:
           github-token: ${{ secrets.WORKFLOW_TOKEN }}
           package-manager: yarn
