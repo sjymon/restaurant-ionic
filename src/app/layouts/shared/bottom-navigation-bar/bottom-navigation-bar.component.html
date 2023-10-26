@@ -1,0 +1,23 @@
+<ion-tabs>
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button tab="home" [routerLink]="['/home']">
+      <ion-img src="assets/icons/home.svg" alt="home"></ion-img>
+      <ion-label>Home</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="search" [routerLink]="['/search']">
+      <ion-img src="assets/icons/search.svg" alt="search"></ion-img>
+      <ion-label>Search</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="recent" [routerLink]="['/recent']">
+      <ion-img src="assets/icons/refresh-circle.svg" alt="recent"></ion-img>
+      <ion-label>Recent</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="profile" [routerLink]="['/profile']">
+      <ion-img src="assets/icons/person.svg" alt="profile"></ion-img>
+      <ion-label>Profile</ion-label>
+    </ion-tab-button>
+  </ion-tab-bar>
+</ion-tabs>
