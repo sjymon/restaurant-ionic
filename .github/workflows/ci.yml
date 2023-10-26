@@ -12,10 +12,10 @@ jobs:
       matrix:
         node-version: [18.x]
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v4
 
       - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node-version }}
 
@@ -25,16 +25,16 @@ jobs:
       - name: Lint
         run: yarn lint
 
-      # - name: Test
-      #   run: yarn test
+      - name: Test
+        run: yarn test:dev
 
       - name: Build
         run: yarn build
 
-      - uses: artiomtr/jest-coverage-report-action@v2.2.5
+      - name: Upload coverage reports to Codecov
+        uses: codecov/codecov-action@v3
         with:
-          github-token: ${{ secrets.WORKFLOW_TOKEN }}
-          package-manager: yarn
-          threshold: ${{steps.threshold.outputs.prop}}
-          skip-step: all
-          annotations: failed-tests
+          token: ${{ secrets.CODECOV_TOKEN }}
+          fail_ci_if_error: true
+          name: codecov-umbrella
+          verbose: true
