@@ -37,4 +37,5 @@ jobs:
           token: ${{ secrets.CODECOV_TOKEN }}
           fail_ci_if_error: true
           name: codecov-umbrella
+          files: "/home/runner/work/restaurant-ionic/restaurant-ionic/coverage/restaurant-ionic-report/cobertura-coverage.xml"
           verbose: true
